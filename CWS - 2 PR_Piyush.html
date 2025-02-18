@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: left; /* Align content to the left */
+            margin: 0;
+        }
+        .container {
+            width: 80%;
+            margin: 40px auto;
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        form {
+            margin-top: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="text"], input[type="email"], select, input[type="tel"] {
+            width: 100%;
+            height: 40px;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        button[type="submit"] {
+            width: 100%;
+            height: 40px;
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button[type="submit"]:hover {
+            background-color: #3e8e41;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>TARANG 2K25 REGISTRATION FORM</h2>
+        <form action="Submission.html" method="post">
+            <label for="FullName"><b>Full Name</b></label>
+            <input type="text" id="FullName" name="FullName" placeholder="Enter Name" required>
+            <br><br>
+            
+            <label for="Year"><b>Year</b></label>
+            <select id="Year" name="Year" required>
+                <option value="1st">1st</option>
+                <option value="2nd">2nd</option>
+                <option value="3rd">3rd</option>
+                <option value="4th">4th</option>
+            </select>
+            <br><br>
+
+            <label for="Semester"><b>Semester</b></label>
+            <select id="Semester" name="Semester" required>
+                <option value="1st">1st</option>
+                <option value="2nd">2nd</option>
+                <option value="3rd">3rd</option>
+                <option value="4th">4th</option>
+                <option value="5th">5th</option>
+                <option value="6th">6th</option>
+                <option value="7th">7th</option>
+                <option value="8th">8th</option>
+            </select>
+            <br><br>
+            
+            <label for="Branch"><b>Branch</b></label>
+            <select id="Branch" name="Branch" required>
+                <option value="CSE">CSE</option>
+                <option value="AI">AI</option>
+                <option value="ETC">ETC</option>
+                <option value="EE">EE</option>
+                <option value="CIVIL">CIVIL</option>
+            </select>
+            <br><br>
+
+            <label for="email"><b>Email</b></label>
+            <input type="email" id="email" name="email" placeholder="Enter Email" required>
+            <br><br>
+            
+            <label for="phone"><b>Phone Number</b></label>
+            <input type="tel" name="phone" id="phone" maxlength="10" placeholder="Phone Number" pattern="[0-9]{10}" required>
+            <script>
+                document.getElementById('phone').addEventListener('input', function (e) {   
+                    e.target.value = e.target.value.replace(/[^0-9]/g, '');
+                });
+            </script>
+            <br><br>
+            
+            <label for="gender"><b>Gender</b></label>
+            <select id="gender" name="gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+            <br><br>
+            
+            <label for="TARANG EVENT"><b>TARANG EVENT</b></label>
+            <div id="TARANG EVENT">
+                <input type="checkbox" id="DANCE_COMPETITION" name="TARANG_EVENT" value="DANCE_COMPETITION">
+                <label for="DANCE_COMPETITION">DANCE COMPETITION</label><br>
+    
+                <input type="checkbox" id="SINGING_COMPETITION" name="TARANG_EVENT" value="SINGING_COMPETITION">
+                <label for="SINGING_COMPETITION">SINGING COMPETITION</label><br>
+    
+                <input type="checkbox" id="RANGOLI_COMPETITION" name="TARANG_EVENT" value="RANGOLI_COMPETITION">
+                <label for="RANGOLI_COMPETITION">RANGOLI COMPETITION</label><br>
+     
+                <input type="checkbox" id="FASHION_SHOW" name="TARANG_EVENT" value="FASHION_SHOW">
+                <label for="FASHION_SHOW">FASHION SHOW</label><br>
+            </div>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</body>
+</html>
